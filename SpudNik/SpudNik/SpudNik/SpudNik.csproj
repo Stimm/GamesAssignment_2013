@@ -77,6 +77,8 @@
     <Reference Include="System.Net" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BepuEntity.cs" />
+    <Compile Include="Camera.cs" />
     <Compile Include="Groundbox.cs" />
     <Compile Include="GameEnt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

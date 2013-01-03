@@ -23,13 +23,11 @@ namespace SpudNik
         public Groundbox()
         {
             graphics = Game1.Instance().GraphicsDeviceManager;
-            //Content.RootDirectory = "Content";
-            //TargetElapsedTime = TimeSpan.FromSeconds(1 / 30.0);
+
         }
 
         public override void LoadContent()
         {
-            
 
             float twidth = 10;
             float theight = 10;
@@ -60,8 +58,8 @@ namespace SpudNik
         {
 
             basicEffect.World = Matrix.Identity;
-           // basicEffect.Projection = Game1.Instance().Camera.projection;
-            //basicEffect.View = Game1.Instance().Camera.view;
+            basicEffect.Projection = Game1.Instance().Camera.projection;
+            basicEffect.View = Game1.Instance().Camera.view;
 
            
         }
@@ -81,7 +79,7 @@ namespace SpudNik
             state.AddressV = TextureAddressMode.Wrap;
             state.AddressW = TextureAddressMode.Wrap;
             state.Filter = TextureFilter.Anisotropic;
-            graphics.GraphicsDevice.SamplerStates[0] = state;
+            graphics.GraphicsDevice.SamplerStates[0] = SamplerState.LinearWrap;
             graphics.GraphicsDevice.DrawUserPrimitives<VertexPositionTexture>(PrimitiveType.TriangleList, vertices, 0, 2);
         }
     }

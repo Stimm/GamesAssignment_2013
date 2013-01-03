@@ -18,11 +18,36 @@ namespace SpudNik
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        private Camera camera;
+
         static Game1 instance = null;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        private Groundbox ground = null;
 
         Space space;
+
+       
+        List<GameEnt> children = new List<GameEnt>();
+
+
+        public Groundbox Groundbox
+        {
+            get { return ground; }
+            set { ground = value; }
+        }
+
+        public SpriteBatch SpriteBatch1
+        {
+            get { return spriteBatch; }
+            set { spriteBatch = value; }
+        }
+
+        public List<GameEnt> Children
+        {
+            get { return children; }
+            set { children = value; }
+        }
 
         public GraphicsDeviceManager Graphics
         {
@@ -59,7 +84,16 @@ namespace SpudNik
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            camera = new Camera();
 
+            int midX = GraphicsDeviceManager.DefaultBackBufferHeight / 2;
+            int midY = GraphicsDeviceManager.DefaultBackBufferWidth / 2;
+            Mouse.SetPosition(midX, midY);
+
+
+            children.Add(camera);
+            ground = new Groundbox();
+            children.Add(ground);
             base.Initialize();
         }
 
@@ -74,6 +108,14 @@ namespace SpudNik
             //creating simulation space with gravity inside , gravity might be removed due to game being set in space??
             space = new Space();
             space.ForceUpdater.Gravity = new Vector3(0, -9.81f, 0);
+            
+            Box groundBox = new Box(Vector3.Zero, ground.width, 0.1f, ground.height);
+            space.Add(groundBox);
+
+            foreach (GameEnt child in children)
+            {
+                child.LoadContent();
+            }
 
 
             // TODO: use this.Content to load your game content here
@@ -85,7 +127,10 @@ namespace SpudNik
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            foreach (GameEnt child in children)
+            {
+                child.UnloadContent();
+            }
         }
 
         /// <summary>
@@ -96,12 +141,22 @@ namespace SpudNik
         protected override void Update(GameTime gameTime)
         {
             // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            float timeDelta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            MouseState mouseState = Mouse.GetState();
+            KeyboardState keyState = Keyboard.GetState();
+            if (keyState.IsKeyDown(Keys.Escape))
+            {
                 this.Exit();
-            space.Update();
+            }
 
-            // TODO: Add your update logic here
 
+            for (int i = 0; i < children.Count; i++)
+            {
+                children[i].Update(gameTime);
+            }
+
+            space.Update(timeDelta);
             base.Update(gameTime);
         }
 
@@ -112,11 +167,31 @@ namespace SpudNik
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin();
+            foreach (GameEnt child in children)
+            {
+                DepthStencilState state = new DepthStencilState();
+                state.DepthBufferEnable = true;
+                GraphicsDevice.DepthStencilState = state;
+                child.Draw(gameTime);
+            }
 
-            // TODO: Add your drawing code here
-
-            base.Draw(gameTime);
+            spriteBatch.End();   
         }
+
+        public Camera Camera
+        {
+            get
+            {
+                return camera;
+            }
+            set
+            {
+                camera = value;
+            }
+        }
+
+
 
         public GraphicsDeviceManager GraphicsDeviceManager
         {

@@ -9,3 +9,9 @@ C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj
 C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\SpudNik.exe
 C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\SpudNik.pdb
 C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\ground.xnb
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\SpudNik.exe
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\SpudNik.pdb
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\SpudNik.exe
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\SpudNik.pdb
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\BEPUphysics.xml
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\Ground.xnb

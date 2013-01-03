@@ -22,13 +22,14 @@ namespace SpudNik
 
 
         private MouseState mouseState;
+        private KeyboardState keyBoard;
 
         public override void LoadContent()
         {
             
         }
 
-        public override void UnLoadContent()
+        public override void UnloadContent()
         {
 
         }
@@ -43,7 +44,7 @@ namespace SpudNik
         {
             float timeDelta = (float)(gameTime.ElapsedGameTime.Milliseconds / 1000.0f);
 
-            keyboardState = Keyboard.GetState();
+            keyBoard = Keyboard.GetState();
             mouseState = Mouse.GetState();
 
             int mouseX = mouseState.X;
@@ -59,7 +60,17 @@ namespace SpudNik
             pitch(-(float)deltaY / 100.0f);
             Mouse.SetPosition(midX, midY);
 
+            view = Matrix.CreateLookAt(pos, pos + cLook, cUp);
+            projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f), Game1.Instance().GraphicsDeviceManager.GraphicsDevice.Viewport.AspectRatio, 1.0f, 10000.0f);
+        }
+        public Matrix getProjection()
+        {
+            return projection;
+        }
 
+        public Matrix getView()
+        {
+            return view;
         }
 
     }
