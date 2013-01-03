@@ -36,12 +36,20 @@ namespace SpudNik
 
         public Matrix worldTransform;
         public Matrix locilTransform;
-    }
-    public virtual void LoadContent()
-    {
-    model = LoadContent;
-    {
 
-    dsfgjsdfkgjhsdfkghadktghasfgsd;
+        public virtual void LoadContent()
+        {
+            model = Game1.Instance().Content.Load<Model>(modelname);
+        }
 
+        public abstract void Update(GameTime gameTime);
+
+        public virtual void Draw(GameTime gameTime)
+        {
+        }
+
+        public virtual void UnloadContent()
+        {
+        }
+    }    
 }

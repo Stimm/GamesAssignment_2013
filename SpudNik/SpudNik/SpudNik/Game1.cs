@@ -8,6 +8,8 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using BEPUphysics;
+using BEPUphysics.Entities.Prefabs;
 
 namespace SpudNik
 {
@@ -16,11 +18,24 @@ namespace SpudNik
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        static Game1 instance = null;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        public GraphicsDeviceManager Graphics
+        {
+            get { return graphics; }
+            set { graphics = value; }
+        }
+
+        public static Game1 Instance()
+        {
+            return instance;
+        }
+
         public Game1()
         {
+            instance = this;
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
         }

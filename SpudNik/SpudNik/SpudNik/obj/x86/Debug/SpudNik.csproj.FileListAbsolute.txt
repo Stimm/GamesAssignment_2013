@@ -1,0 +1,2 @@
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
