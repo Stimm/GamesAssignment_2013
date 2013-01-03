@@ -1,2 +1,11 @@
 C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\SpudNik.exe
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\SpudNik.pdb
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\BEPUphysics.dll
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\BEPUphysics.xml
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\SpudNik.exe
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\obj\x86\Debug\SpudNik.pdb
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\ground.xnb

@@ -22,6 +22,8 @@ namespace SpudNik
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Space space;
+
         public GraphicsDeviceManager Graphics
         {
             get { return graphics; }
@@ -37,6 +39,14 @@ namespace SpudNik
         {
             instance = this;
             graphics = new GraphicsDeviceManager(this);
+
+            graphics.PreferredBackBufferWidth = 1024;
+            graphics.PreferredBackBufferHeight = 768;
+            graphics.PreferMultiSampling = true;
+            graphics.SynchronizeWithVerticalRetrace = true;
+            graphics.ApplyChanges();
+            
+            
             Content.RootDirectory = "Content";
         }
 
@@ -61,6 +71,10 @@ namespace SpudNik
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            //creating simulation space with gravity inside , gravity might be removed due to game being set in space??
+            space = new Space();
+            space.ForceUpdater.Gravity = new Vector3(0, -9.81f, 0);
+
 
             // TODO: use this.Content to load your game content here
         }
@@ -84,6 +98,7 @@ namespace SpudNik
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            space.Update();
 
             // TODO: Add your update logic here
 
@@ -96,11 +111,20 @@ namespace SpudNik
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+
+        public GraphicsDeviceManager GraphicsDeviceManager
+        {
+            get
+            {
+                return graphics;
+            }
+
         }
     }
 }
