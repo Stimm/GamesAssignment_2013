@@ -126,5 +126,16 @@ namespace SpudNik
             return angle;
         }
 
+        public void walk(float amount)
+        {
+            pos += cLook * amount;
+        }
+
+        public void strafe(float amount)
+        {
+
+            pos += cRight * amount;
+
+        }
     }    
 }

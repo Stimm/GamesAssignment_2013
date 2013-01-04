@@ -24,6 +24,7 @@ namespace SpudNik
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         private Groundbox ground = null;
+        //private GameEnt dalek;// testing stuff
 
         Space space;
 
@@ -60,6 +61,14 @@ namespace SpudNik
             return instance;
         }
 
+        private BasicObj basicObj;
+
+        private BasicObj BasicObj
+        {
+            get { return basicObj; }
+            set { basicObj = value; }
+        }
+
         public Game1()
         {
             instance = this;
@@ -90,12 +99,22 @@ namespace SpudNik
             int midY = GraphicsDeviceManager.DefaultBackBufferWidth / 2;
             Mouse.SetPosition(midX, midY);
 
-
+            
+            
             children.Add(camera);
+
             ground = new Groundbox();
             children.Add(ground);
+
+            basicObj = new BasicObj();
+            basicObj.modelname = "dalek";
+            children.Add(basicObj);
+
+
             base.Initialize();
         }
+
+        
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
@@ -117,8 +136,6 @@ namespace SpudNik
                 child.LoadContent();
             }
 
-
-            // TODO: use this.Content to load your game content here
         }
 
         /// <summary>

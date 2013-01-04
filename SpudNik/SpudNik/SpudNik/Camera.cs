@@ -62,7 +62,29 @@ namespace SpudNik
 
             view = Matrix.CreateLookAt(pos, pos + cLook, cUp);
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f), Game1.Instance().GraphicsDeviceManager.GraphicsDevice.Viewport.AspectRatio, 1.0f, 10000.0f);
+
+            if (keyBoard.IsKeyDown(Keys.W))
+            {
+                walk(timeDelta * 40);
+            }
+
+            if (keyBoard.IsKeyDown(Keys.S))
+            {
+                walk(-timeDelta * 40);
+            }
+
+            if (keyBoard.IsKeyDown(Keys.A))
+            {
+                strafe(-timeDelta * 40);
+            }
+
+            if (keyBoard.IsKeyDown(Keys.D))
+            {
+                strafe(timeDelta * 40);
+            }
+            
         }
+
         public Matrix getProjection()
         {
             return projection;

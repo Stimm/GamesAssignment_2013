@@ -10,20 +10,23 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Net;
 using Microsoft.Xna.Framework.Storage;
-using BEPUphysics.Entities.Prefabs;
-
 namespace SpudNik
 {
-    class BepuEntity : GameEnt
+    class BasicObj:GameEnt
     {
-        public BEPUphysics.Entities.Entity body;
 
         public override void Update(GameTime gameTime)
         {
-            worldTransform = body.WorldTransform;
-
         }
 
 
+        public BasicObj()
+        {
+            cRight = new Vector3(1.0f, 0.0f, 0.0f);
+            cUp = new Vector3(0.0f, 1.0f, 0.0f);
+            cLook = new Vector3(0, 0, -1);
+            globalUp = new Vector3(0, 0, 1);
+            globalDown = new Vector3(0, 0, -1);
+        }
     }
 }
