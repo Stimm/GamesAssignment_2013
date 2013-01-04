@@ -2,13 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>ground.jpg</Source>
-      <Name>ground</Name>
+      <Source>Ground.png</Source>
+      <Name>Ground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\ground.xnb</Output>
-      <Time>2013-01-03T15:40:27.7908+00:00</Time>
+      <Output>C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\Ground.xnb</Output>
+      <Time>2013-01-04T17:01:55.301+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

@@ -107,6 +107,20 @@ namespace SpudNik
 
         }
 
+
+        public void walk(float amount)
+        {
+            pos += cLook * amount;
+        }
+
+        public void strafe(float amount)
+        {
+
+            pos += cRight * amount;
+
+        }
+
+
         public float getPitch()
         {
             if (cLook.Y == globalDown.Y)

@@ -60,6 +60,49 @@ namespace SpudNik
             pitch(-(float)deltaY / 100.0f);
             Mouse.SetPosition(midX, midY);
 
+
+            if (mouseState.LeftButton == ButtonState.Pressed)
+            {
+                //Vector3 newTargetPos= pos + (look * 500.0f);
+            }
+
+            if (mouseState.RightButton == ButtonState.Pressed)
+            {
+                Vector3 newTargetPos = pos;
+
+            }
+
+            if (keyBoard.IsKeyDown(Keys.LeftShift))
+            {
+                timeDelta *= 60.0f;
+            }
+
+            if (keyBoard.IsKeyDown(Keys.W))
+            {
+                walk(timeDelta);
+            }
+
+            if (keyBoard.IsKeyDown(Keys.S))
+            {
+                walk(-timeDelta);
+            }
+
+            if (keyBoard.IsKeyDown(Keys.A))
+            {
+                strafe(-timeDelta);
+            }
+
+            if (keyBoard.IsKeyDown(Keys.D))
+            {
+                strafe(timeDelta);
+            }
+
+
+
+
+
+
+
             view = Matrix.CreateLookAt(pos, pos + cLook, cUp);
             projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(45.0f), Game1.Instance().GraphicsDeviceManager.GraphicsDevice.Viewport.AspectRatio, 1.0f, 10000.0f);
         }
