@@ -145,6 +145,15 @@ namespace SpudNik
 
             MouseState mouseState = Mouse.GetState();
             KeyboardState keyState = Keyboard.GetState();
+
+            if (mouseState.LeftButton == ButtonState.Pressed)
+            {
+                // firing of potato goes here
+                fireBall();
+
+            }
+            
+            
             if (keyState.IsKeyDown(Keys.Escape))
             {
                 this.Exit();
@@ -178,6 +187,24 @@ namespace SpudNik
 
             spriteBatch.End();   
         }
+
+
+
+        void fireBall()
+        {
+            BepuEntity ball = new BepuEntity();
+            ball.modelname = "potato";
+            float size = 1;
+            ball.localTransform = Matrix.CreateScale(new Vector3(size, size, size));
+            ball.body = new Sphere(Camera.pos + (Camera.cLook * 5), size, size);
+            //ball.diffuse = new Vector3((float)random.NextDouble(), (float)random.NextDouble(), (float)random.NextDouble());
+            space.Add(ball.body);
+            ball.LoadContent();
+            //ball.body.ApplyImpulse(Vector3.Zero, Camera.look * 50); Cuases spinning of the object
+            ball.body.LinearVelocity = Camera.cLook * 100; // Launches the object
+            children.Add(ball);
+        }
+
 
         public Camera Camera
         {

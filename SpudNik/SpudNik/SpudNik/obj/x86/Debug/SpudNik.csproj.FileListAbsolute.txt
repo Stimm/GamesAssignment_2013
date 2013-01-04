@@ -15,3 +15,4 @@ C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik
 C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\SpudNik.pdb
 C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\BEPUphysics.xml
 C:\Users\Lanpooter\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\Ground.xnb
+C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\potato.xnb

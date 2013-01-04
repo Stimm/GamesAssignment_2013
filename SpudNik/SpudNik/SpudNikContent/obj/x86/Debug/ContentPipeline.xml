@@ -8,7 +8,27 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\Ground.xnb</Output>
-      <Time>2013-01-04T17:01:55.301+00:00</Time>
+      <Time>2013-01-04T17:30:17.771+00:00</Time>
+    </Item>
+    <Item>
+      <Source>potato.FBX</Source>
+      <Name>potato</Name>
+      <Importer>FbxImporter</Importer>
+      <Processor>ModelProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\jarek\Documents\GitHub\GamesAssignment_2013\SpudNik\SpudNik\SpudNik\bin\x86\Debug\Content\potato.xnb</Output>
+      <Time>2013-01-02T16:50:00.438+00:00</Time>
+      <Dependency>
+        <Key>obj\x86\Debug\potato_0.xml</Key>
+        <Value>2013-01-04T21:34:54.615+00:00</Value>
+      </Dependency>
+    </Item>
+    <Item>
+      <Source>potato.FBX</Source>
+      <Importer>FbxImporter</Importer>
+      <Options>IntermediateFile, DontCacheImportedData</Options>
+      <Output>obj\x86\Debug\potato_0.xml</Output>
+      <Time>2013-01-02T16:50:00.438+00:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
